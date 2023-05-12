@@ -1,0 +1,198 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  /* font-family: 'Inter', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  background-color: #5d4954;
+}
+
+.logo {
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+
+}
+
+@media screen and (max-width: 1400px) {
+  .nav-links {
+    width: 60%;
+  }
+
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #5d4954;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  /* Makes the list items invisible */
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/* Header Styling */
+.header{
+  text-align: center;
+}
+body{
+  max-width: 100%;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+/* Main Styling */
+.main {
+  
+}
+section {
+  /* padding-left: 10px; */
+}
+.center {
+  margin-left: 30px;
+}
+.section1 {
+  
+
+}
+.section1 > ul  {
+  margin-left: 30px;
+  
+}
+.section3 .boxForFunctions {
+  display: flex;
+  gap: 5px;
+  
+  
+}
+.flex-child {
+  flex: 1;
+  border: 2px solid rgb(18, 18, 2);
+  padding: 5px;
+}
+.flex-child:first-child {
+  /* margin-right: 20px; */
+  
+} 
+.pink{
+  border: 2px solid blue;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  
+}
+.purple {
+  border: 2px solid purple;
+  padding: 4px;
+}
+.green {
+  border: 2px solid green ;
+  padding: 4px;
+}
+.green > ul{
+  list-style: none;
+}
+.boxes2 {
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+}
+.boxes2 > .column {
+  /* width: 100%; */
+  border: 2px solid black;
+}
+.section6 > h5{
+  float: left;
+padding-right: 10px;
+}

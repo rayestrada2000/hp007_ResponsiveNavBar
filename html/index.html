@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>hp007_ResponsiveNavBar</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">
+        <h4>The Nav</h4>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Tutorial_Src</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <main class="main">
+      <header class="header">
+        <h1>Notes of the Past Three Days</h1>
+        <p>Today's Date: August 06, 2022</p>
+      </header>
+      <section class="section1">
+        <h2>Site: JavaScript Classes Tutorial</h2>
+        <p>Classes are used to create one or more objects.</p>
+        <p class="center">class &rightarrow; object</p>
+        <h3>Two Kinds of Objects</h3>
+        <p>1) Instance <u>Properties</u>: What they Have</p>
+        <ul>
+          <li>name</li>
+          <li>age</li>
+          <li>height</li>
+        </ul>
+        <p>2) Instance <u>Methods</u>: What They Do</p>
+        <ul>
+          <li>talk</li>
+          <li>run</li>
+          <li>jump</li>
+        </ul>
+        <p>To write a "class" in JavaScript we write </p> <br>
+        <strong>
+          <p>class Rectangle {</p>
+          <p class="center">constructor() {</p>
+          <p class="center">&nbsp; console.log("The rectangle is being created.");</p>
+          <p class="center">}</p>
+          <p>}</p>
+        </strong> <br>
+        <p>3) Now that you have a "Blueprint" (what we call a "class"), we can now create an
+          <u><strong>instance</strong></u> of that class:</p>
+        <p class="center">let myRectangle = new Rectangle();</p>
+        <p>Inside the curly brackets of the constructor one can create either properties, methods, or both. Essentially,
+          you add what the class will
+          <u>have</u>, and what it will <u>do</u>. Notice the importance of the word "constructor." Also notice the
+          special use of the word "this." with its period. It demonstrates javaScript's use of dot notation which allows
+          program "chainning."</p>
+        <p>class Rectangle {</p>
+        <p>&nbsp; &rightarrow; constructor() {</p>
+        <p>&nbsp;&nbsp; &rightarrow; this. width = 5;</p>
+        <p>&nbsp;&nbsp; &rightarrow; this. length = 3;</p>
+        <p>&nbsp;&nbsp; &rightarrow; this. color = "blue";</p>
+        <p>&nbsp;&nbsp;}</p>
+        <p>}</p>
+        <h3>So for Review:</h3>
+        <p> class ClassName { &leftarrow;curly bracket</p>
+        <p>&nbsp;contructor() { // This section is to list the things the object has with the prefix of "this."</p>
+        <p>&nbsp;&nbsp;&nbsp;this.nameOfSomething = value;</p>
+        <p>&nbsp;} // The next section in the class is for Methods--what the object can do.</p>
+        <p>&nbsp;walk() {</p>
+        <p>&nbsp;This area is for code for the "walk()" method.</p>
+        <p>} &leftarrow; Finally we close out the class with a closing curly bracket.</p>
+      </section>
+      <section class="section2">
+        <h2>Adding More to The Blueprint</h2>
+        <p>But here is a plot twist, when we write the <strong><u>constructor</u></strong>(), we can put something in
+          between the parenthesis. Do you recall</p>
+        <img src="/images/Class_1.PNG" width="400" alt="">
+        <p>If we can enter values when we are creating the class, that would be a lot better for us. First, let me
+          rewrite the class to better customize it to suite my needs.</p>
+        <img src="/images/Revised_Class_1.PNG" width="400" alt="">
+        <p>Next, as you can see, I have taken the liberty to instantiate from the "Blueprint/Class" of
+          <em><strong>Rectangle</strong></em> the values 5, 3, and "blue" in the parenthesis. This is done with VS Code
+          previewing my choices to me as I am entering data. But how can I be sure that my data was entered correctly?
+          To answer that question I will need to examine the browser's development tools. I place my mouse cursor in the
+          browser and right-click to bring up a drop-down menu. I choose <em>Inspect (Q)</em>. </p>
+        <img src="/images/InspectBrowser.PNG" width="200" alt="">
+        <p>This brings up the following:</p>
+        <img src="/images/OpeningDevTools.PNG" width="400" alt="">
+        <p>I make sure that "Console" on the top is selected and that I select only "Logs" from the buttons. So now I
+          place my cursor to the right of the chevron in at the bottom of the page. I type in the name of the object I
+          just instantiated, "rectangle1". The browser's tool immediately shows all my choices. I choose the one
+          highlighted.</p>
+        <img src="/images/OpeningDevTools2.PNG" width="400" alt="">
+        <p>Upon selecting it, I can see its inner values.</p>
+        <img src="/images/OpeningDevTools3.PNG" width="400" alt="">
+        <p>I can get even more information by pressing the arrow key in the browser.</p>
+        <img src="/images/OpeningDevTools4.PNG" width="400" alt="">
+        <p>As you can see from the image above, "rectangle1's" data is correct. I am now going to add a method to the
+          class called "area."</p>
+        <img src="/images/areaOfRectangle2.PNG" width="400" alt="">
+        <h3>Methods in the Class</h3>
+        <p>As you can see in the many images presented there is an area in the class definition for "methods". Methods
+          are actually functions that work just like the ones you learned in Algebra. In fact, if you look at the
+          building of methods in your class, it will be helpful to consider its logic as if you were making a function
+          using a TInSpire.</p>
+        <p>Also, other computer languages define their function (methods) as if they were functions in math--take Python
+          for instance. So just for review, a function, using a calculator is first defined:</p>
+        <p class="center">define f(x)= 3x&sup2; - 2x + 5 </p>
+        <p>It can then be implemented by replacing the x in the parenthesis with a value. By the way, the "f" in this
+          function stands for "function" as it is an anonymous function. </p>
+        <p class="center">f(3)=3x&sup2; - 2x + 5 then executes as &nbsp;&nbsp; 3*(3)&sup2; - (2*3) + 5</p>
+        <p>So that f(3) = 26. But we are not limited to just x as variables or "f" as the name of the anonymous
+          function. We can also give more meaningful names to our functions like "rate" for instance:</p>
+        <p class="center">rate(a, b, c) = 3a * 2b<sup>c</sup></p>
+        <p>Although we gave the function a meaningful name like "rate," we can also give the variables meaningful names
+          so that people can have a better understanding of what the function does. However, since this is a review of
+          my notes over the past 3 days, I will return to the subject at hand--that being JavaScript Classes,
+          Properties, Constructors, and Methods (aka: functions).</p>
+        <p>One other important scribble in my notes about functions has to do with the word "return." My notes say,
+          always use this word <strong><u>return</u></strong> in your method or function. I'm not sure if I can actually
+          do this but it is emphasized in my notes.</p>
+        <h3>Another Example of a Class</h3>
+      </section>
+      <section class="section3">
+        <h2>From the Coding Train</h2>
+        <h3>The Arrow Function</h3>
+        <p>Funny that my notes say one thing but my mind says another. Here I am again back on the topic of "Functions,"
+          or, should I say, "Methods, and, "Anonymous Functions." The host goes through some of the ways thing were done
+          in JavaScript ES5 such as the use of the special word "var" which has since be deprecated as everyone is now
+          encouraged to use "let" and "const" instead.</p>
+        <p>And so we come to the topic of the "Arrow Function" as a new way for JavaScript programmers to write
+          functions, I am confused and a little disappointed because I like the use of the word "function." I even found
+          the old way of writting a function:</p>
+
+        <div class="boxForFunctions">
+          <div class="flex-child magenta">
+            <h4>Old ES5 Function</h4>
+            <p>function Sqr(){</p>
+            <p>return x * x;</p>
+            }
+          </div>
+
+          <div class="flex-child green">
+            <h4>New ES6 Function</h4>
+            <p>let Sqr = () => x * x;</p>
+            <br>
+            <p><em>This function becomes an anonymous function (a no-name function). It is called by Sqr(x).</em> </p>
+          </div>
+          <div class="flex-child pink">
+            <h4>SideBar</h4>
+            <p>Dance Video:</p>
+            <a href="https://www.youtube.com/watch?v=932n5qEyOsk&list=RD932n5qEyOsk&start_radio=1">Feel It Still - Dance
+              Video On YouTube</a>
+          </div>
+        </div>
+        <p>By the way, I signed up for the P5 JavaScript online library of a special version of JavaScript especially
+          designed for learning JavaScript. This is the main tool that the <em>Coding Train</em> host uses for his
+          YouTube JavaScript tutorial videos.</p>
+      </section>
+      <section class="section4">
+        <h2>Making an Object (in JavaScript)</h2>
+        <p>const myObj = {</p>
+        <p><mark>name: "Dave",</mark></p>
+        <p><mark>hobbies: ["eat", "sleep", "code"],</mark></p>
+        <p><mark>hello: function(){</mark></p>
+        <p><mark>console.log("Hello");</mark></p>
+        <p><mark>}</mark></p>
+        <p>}</p>
+      </section>
+      <section class="section5">
+        <h2>Classes -- Getters & Setters</h2>
+        <p>Although JavaScript is not necessarily an OOP (Object Oriented Programming) language, it has many new
+          features in its EA6 version that makes it act like it is an OOP language. As we have been practicing with
+          making "Classes," we are also going to test-drive some of the new features that allow us to use Getters &
+          Setters--a very OOP like feature.</p>
+      </section>
+      <section class="section6">
+        <h2>Modern JavaScript Tutorial</h2>
+        <h3>Intro & Setup</h3>
+        <p>By Net Ninja</p>
+        <br>
+        <div class="grid-container">
+          <div class="grid-child purple">
+            <a href="https://youtu.be/iWOYAxlnaww">Modern JavaScript Tutorial #1 - Intro & Setup</a>
+            Grid Column 1
+            <p>JavaScript can also be used as a backend development tool because of a program called "None.js."</p>
+          </div>
+          <div class="grid-child green">
+            <p>What is required:</p>
+            <ul>VS Code Extensions:
+              <li>&nbsp; Live Server</li>
+              <li>&nbsp; Material Icon Theme</li>
+              <li>&nbsp; Mono Kaitt - by Davde Casella</li>
+              <li>&nbsp; GitHub</li>
+            </ul>
+          </div>
+        </div>
+        <h3>#2 - Syntax Basics & Types</h3>
+        <p>How do you enter data from the user into JavaScript? There are several ways. One way is through the
+          "alert();" function.</p>
+        <p>&nbsp; alert("Hello World!");</p>
+        <h4>Sidebar: "Abstraction"</h4>
+        <p>Put reusable code in : <u>functions</u> aka <u>methods</u>, and <u>subroutines</u></p>
+        <p>We give our Function a name:</p>
+        <p>But wait, have I not seen this before? Answer: Yes. Back in my college years, I worked with it everyday when
+          I was learning algebra, trigonometry, and calculus. In fact, I was very excited to work with these concepts
+          because I had just acquired this great advanced tool called the TInSpire CAS graphing calculator. It was no
+          ordinary TI graphing calculator--it was a CAS calculator! The difference being that a CAS calculatore could
+          solve complex algebra (and thereby, trigonomety, and calculus) problems. </p>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;This is like centering 20 spaces using &nbsp; <strong>{&amp;nbsp;}*20</strong> &nbsp; which creates 20
+        space-bar actions.
+        <p>By typing "<strong>{items $}*5</strong>" the html will display in the browser as: items 1
+          items 2
+          items 3
+          items 4
+          items 5. This is due to the dollar sign ($) telling the html to increment </p>
+        <h4>Sidebar: End</h4>
+        <h3>Continue #2 - Syntax Basics & Types</h3>
+        <p>As discussed before the sidebar (sorry), I left off here then my notes got illegible. I must of been too
+          tired.</p>
+        <h3>Other Things I Researched</h3>
+        <p>Another thing I researched was the way JavaScript defines a class with its constructor, and the way C#
+          defines its class with it constructor.</p>
+        <div class="boxes2">
+          <div class="column">
+            <p>
+              <h4>JavaScript Class Definition</h4>
+              <img src="/images/areaOfRectangle2.PNG" width="400" alt="">
+            </p>
+            <p>Notice that JavaScript declares the object with either "const" or "let," while C# simply calls the name
+              of the class, "Car."</p>
+          </div>
+          <div class="column">
+            <p>
+              <h4>C# Class Definition</h4>
+              <img src="/images/C_SharpClassDefinition.PNG" width="400" alt="">
+              <img src="/images/C_SharpClassDefinition2.PNG" width="400" alt="">
+            </p>
+          </div>
+        </div>
+        <p>Both languages initialize exactly the same way.</p>
+        <h3>Yet Another Topic</h3>
+        <h4>From: YouTube's JavaScript OOP Crash Course (ES5 and ES6)</h4>
+        <h5>By Traversy Media</h5>
+        <a href="https://youtu.be/vDJpGenyHaA">YouTube Link</a>
+        <p>I copied this little bit of JaavaScript code because I thought I could use it one day.</p>
+        <p>// Comment: GetAge: getting the age of a book.</p>
+        <p>---- ---- ---- ---- ---- ---- --- --- --- --- --- --- --- --- </p>
+        <p>Book.prototype.getAge = Function(){</p>
+        <p>const years = new Date().getFullYear() - this.year;</p>
+        <p>return `${this.title} is ${years}years old`;</p>
+        <p>}</p>
+        <p>----- Note the use of "Back-tics" instead of qoutes. ----</p>
+      </section>
+      <section class="section7">
+        <h2>ES6 Classes</h2>
+        <p>This is from my notes. Practice writting classes for JavaScript contributes to "muscle" memory. So here I go
+          again typing out a class called "Book."</p>
+        <p>-------------------------</p>
+
+        <p>class Book{</p>
+        <p>constructor(_title, _author, _year){</p>
+        <p>this.title = _title;</p>
+        <p>this.author = _author;</p>
+        <p>this.year = _year;</p>
+        <p>&nbsp; }</p>
+        <p>}</p>
+        <p>// Next, instantiate the class into an "object." ---</p> <br>
+        <p>const book1 = new Book("The Book of Tears", "John Doe", 2013);</p>
+        <p>--- -- -- -- -- -- -- -- -- -- -- -- -- -- </p>
+        <p>// -- -- -- Here's somemore practice writting classes -- -- --</p>
+        <p>Class User{ <strong>&leftarrow; Question: Is "Class" capitalized or not ?</strong></p>
+        <p>constructor(_email, _name){</p>
+        <p>this.email = _email;</p>
+        <p>this.name = _name;</p>
+        <p>&nbsp;}</p>
+        <p>logIn(){</p>
+        <p>console.log(this.email, "just logged in.");</p>
+        <p>return this;</p>
+        <p>}</p>
+        <p>logOut(){</p>
+        <p>console.log(this.email, "just logged out.");</p>
+        <p>return this;</p>
+        <p>}</p>
+        <p>-- -- -- -- -- -- -- -- -- -- --</p>
+        <p>let UserOne = new User("ray@yahoo.com", "Ray");</p>
+        <p>let userTwo = new User("john@gmail.com", "Johnathan");</p>
+        <p>-- -- -- -- -- -- -- -- -- -- - -- --- - - - - - - -- </p>
+      </section>
+      <section class="section8">
+        <h2>Inheritance</h2>
+        <p>Class Admin <strong>extends</strong> User{</p>
+        <p>constructor("mary20@gmail.com", "Mary Martin")</p>
+        <em>This constructor may not be needed the class "Admin" already inherits the constructor from the User
+          class.</em>
+<h2>Arrow Functions</h2>
+<p>Arrow functions are like Math functions.</p>
+<p>const makeCard = () =>{</p>
+  <p>The body of the function goes in this block</p>
+<p>}</p>
+<p>Okay, I can end these notes here.</p>
+      </section>
+
+    </main>
+
+
+    <script src="/js/app.js"></script>
+  </body>
+
+</html>
